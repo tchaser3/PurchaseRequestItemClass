@@ -1,0 +1,143 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{04C040D8-04A7-4FF3-A103-E2ACC6232D16}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PurchaseRequestItemsDLL</RootNamespace>
+    <AssemblyName>PurchaseRequestItemsDLL</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NewEventLogDLL">
+      <HintPath>..\..\Blue Jay Class Library\NewEventLogDLL.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FindPurchaseRequestItemsByPONumberDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FindPurchaseRequestItemsByPONumberDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="InsertPurchaseRequestItemEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>InsertPurchaseRequestItemEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="PurchaseRequestItemsClass.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PurchaseRequestItemsDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>PurchaseRequestItemsDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="RemovePurchaseRequestItemEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RemovePurchaseRequestItemEntry.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdatePurchaseRequestItemInformationEntry.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>UpdatePurchaseRequestItemInformationEntry.xsd</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="FindPurchaseRequestItemsByPONumberDataSet.xsc">
+      <DependentUpon>FindPurchaseRequestItemsByPONumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FindPurchaseRequestItemsByPONumberDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FindPurchaseRequestItemsByPONumberDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FindPurchaseRequestItemsByPONumberDataSet.xss">
+      <DependentUpon>FindPurchaseRequestItemsByPONumberDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="InsertPurchaseRequestItemEntry.xsc">
+      <DependentUpon>InsertPurchaseRequestItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="InsertPurchaseRequestItemEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>InsertPurchaseRequestItemEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="InsertPurchaseRequestItemEntry.xss">
+      <DependentUpon>InsertPurchaseRequestItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="PurchaseRequestItemsDataSet.xsc">
+      <DependentUpon>PurchaseRequestItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="PurchaseRequestItemsDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>PurchaseRequestItemsDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="PurchaseRequestItemsDataSet.xss">
+      <DependentUpon>PurchaseRequestItemsDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="RemovePurchaseRequestItemEntry.xsc">
+      <DependentUpon>RemovePurchaseRequestItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="RemovePurchaseRequestItemEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RemovePurchaseRequestItemEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="RemovePurchaseRequestItemEntry.xss">
+      <DependentUpon>RemovePurchaseRequestItemEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdatePurchaseRequestItemInformationEntry.xsc">
+      <DependentUpon>UpdatePurchaseRequestItemInformationEntry.xsd</DependentUpon>
+    </None>
+    <None Include="UpdatePurchaseRequestItemInformationEntry.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>UpdatePurchaseRequestItemInformationEntry.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="UpdatePurchaseRequestItemInformationEntry.xss">
+      <DependentUpon>UpdatePurchaseRequestItemInformationEntry.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
